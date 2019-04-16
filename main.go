@@ -12,6 +12,10 @@ import (
 const profileName = ""
 
 func main() {
+	if len(profileName) == 0 {
+		log.Println("Must enter a profileName")
+		return
+	}
 	resp, err := http.Get(fmt.Sprintf("https://instagram.com/%s", profileName))
 
 	if err != nil {
