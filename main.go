@@ -46,9 +46,7 @@ func main() {
 					continue
 				}
 
-				if strings.HasPrefix(t.Data, "window._sharedData = ") {
-					log.Println("Found sharedData")
-				}
+				log.Println("Found sharedData")
 
 				// Split to grab just the json piece
 				sArray := strings.Split(t.Data, " = ")
